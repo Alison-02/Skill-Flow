@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Skill Flow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#262830"/>
+      <stop offset="1" stop-color="#17181c"/>
+    </linearGradient>
+    <marker id="a" viewBox="0 0 10 10" refX="7" refY="5" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#9296a3"/>
+    </marker>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="253" height="253" rx="54.5" fill="none" stroke="#33353f" stroke-width="3"/>
+  <!-- ligações -->
+  <path d="M88 128 H106" stroke="#9296a3" stroke-width="6" stroke-linecap="round" fill="none" marker-end="url(#a)"/>
+  <path d="M148 114 C166 98 168 84 180 84" stroke="#9296a3" stroke-width="6" stroke-linecap="round" fill="none" marker-end="url(#a)"/>
+  <path d="M148 142 C166 158 168 172 180 172" stroke="#9296a3" stroke-width="6" stroke-linecap="round" fill="none" marker-end="url(#a)"/>
+  <!-- nós -->
+  <rect x="34" y="104" width="52" height="48" rx="14" fill="#2b8a3e"/>
+  <path d="M54 118 L70 128 L54 138z" fill="#fff"/>
+  <rect x="112" y="104" width="38" height="48" rx="14" fill="#6741d9"/>
+  <text x="131" y="136" font-family="Segoe UI, system-ui, sans-serif" font-size="26" font-weight="700" fill="#fff" text-anchor="middle">?</text>
+  <rect x="184" y="62" width="44" height="44" rx="13" fill="#9c36b5"/>
+  <text x="206" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="24" font-weight="700" fill="#fff" text-anchor="middle">§</text>
+  <rect x="184" y="150" width="44" height="44" rx="13" fill="#15aabf"/>
+  <ellipse cx="206" cy="164" rx="11" ry="4.5" fill="none" stroke="#fff" stroke-width="3"/>
+  <path d="M195 164 v14 c0 3 5 5 11 5 s11 -2 11 -5 v-14" fill="none" stroke="#fff" stroke-width="3"/>
+</svg>

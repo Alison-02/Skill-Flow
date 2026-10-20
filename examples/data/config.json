@@ -1,0 +1,91 @@
+{
+  "_comentario": "Configuração de exemplo. Caminhos relativos valem a partir desta pasta. Rode: python app/server.py --data examples/data",
+  "skillRoots": ["../skills"],
+  "claudeMdFiles": ["../CLAUDE.md"],
+  "projectRoots": [],
+  "skillCategory": {
+    "relatorio-mensal-de-metricas": "Relatórios/Mensal",
+    "conferencia-de-totais": "Relatórios/Conferências"
+  },
+  "databases": [
+    {
+      "id": "db:metricas",
+      "name": "Métricas do produto (exemplo)",
+      "engine": "sqlite",
+      "readOnly": true,
+      "access": { "method": "cli", "command": "sqlite3 -readonly metricas.db" },
+      "tables": [
+        {
+          "name": "metricas_mensais",
+          "description": "uma linha por projeto e mês",
+          "columns": [
+            { "name": "projeto", "description": "código do projeto" },
+            { "name": "periodo", "description": "mês de referência (MM/AAAA)" },
+            { "name": "usuarios_ativos", "description": "usuários com ao menos um evento no mês" },
+            { "name": "receita", "description": "cobranças pagas no mês, em reais" },
+            { "name": "churn", "description": "percentual de usuários perdidos no mês" }
+          ]
+        }
+      ],
+      "note": "Banco fictício: serve só para mostrar como declarar um banco."
+    },
+    {
+      "id": "db:cadastro",
+      "name": "Cadastro de projetos (exemplo)",
+      "engine": "postgres",
+      "readOnly": true,
+      "access": { "method": "mcp", "tool": "mcp__exemplo__executar_sql" },
+      "tables": [
+        {
+          "name": "projetos",
+          "description": "um registro por projeto",
+          "columns": [
+            { "name": "codigo", "description": "código do projeto" },
+            { "name": "nome", "description": "nome de exibição" },
+            { "name": "responsavel", "description": "quem responde pelo projeto" },
+            { "name": "ativo", "description": "sim ou não" }
+          ]
+        },
+        {
+          "name": "planos",
+          "description": "um registro por plano do projeto",
+          "columns": [
+            { "name": "projeto", "description": "código do projeto" },
+            { "name": "plano", "description": "nome do plano" },
+            { "name": "ativo", "description": "sim ou não" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "db:metas",
+      "name": "Planilha de metas (exemplo)",
+      "engine": "sheet",
+      "readOnly": true,
+      "access": { "method": "file", "file": "metas.xlsx", "sheet": "Metas" },
+      "tables": [
+        {
+          "name": "Metas",
+          "columns": [
+            { "name": "projeto" },
+            { "name": "meta_receita" },
+            { "name": "vigencia", "description": "data em que a meta passa a valer" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "db:limites",
+      "name": "API de limites (exemplo)",
+      "engine": "api",
+      "readOnly": true,
+      "access": { "method": "http", "url": "https://api.exemplo.invalid/limites", "keyEnv": "EXEMPLO_API_CHAVE" },
+      "tables": [
+        {
+          "name": "limites",
+          "columns": [{ "name": "projeto" }, { "name": "limite" }]
+        }
+      ]
+    }
+  ]
+}

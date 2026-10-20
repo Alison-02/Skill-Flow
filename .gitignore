@@ -1,0 +1,23 @@
+# Dados gerados quando você roda o servidor sobre a pasta de exemplo
+examples/data/flows/
+examples/data/runs/
+examples/data/out/
+examples/data/tools.json
+examples/data/config.json.bak
+examples/data/config.antes-*.json
+
+# Gerados pelo Claude Code ao carregar o mod (tipos para o editor)
+.claude-plugin/types/
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Perfis temporários do Chrome usados nos testes
+skillflow-test-*/

@@ -1,0 +1,18 @@
+{
+  "name": "skill-flow",
+  "version": "0.5.0",
+  "description": "Editor visual de fluxos de skills: ligue skills, trechos de skills e CLAUDE.md, consultas a bancos e ferramentas, e gere uma skill orquestradora que o Claude segue passo a passo.",
+  "author": {
+    "name": "Alison-02"
+  },
+  "homepage": "https://github.com/Alison-02/Skill-Flow",
+  "repository": "https://github.com/Alison-02/Skill-Flow",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "workflow",
+    "visual-editor",
+    "claude-code",
+    "orchestration"
+  ]
+}

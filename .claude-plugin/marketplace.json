@@ -1,0 +1,6 @@
+{
+  "name": "skill-flow",
+  "description": "Skill Flow: editor visual de fluxos de skills para o Claude Code.",
+  "owner": { "name": "Alison-02" },
+  "plugins": [{ "name": "skill-flow", "source": "./" }]
+}
